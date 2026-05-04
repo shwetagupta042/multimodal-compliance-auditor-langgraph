@@ -32,18 +32,7 @@ def setup_telemetry():
         logger.error(f"Failed to initialize azure monitor {str(e)}")
 
 
-'''
-why do we use telemetry?
 
-without: API is slow
-how many users today? no visibility
-with : which part of API is slow?
-- how many users today?
-- /audit endpoint averages to 4.5s and /indexer endpoint avg to 3.5s
-- Error logs show : 12% of audits failed due to youtube download errors
-- Metrics show: 450 API calls today, 89% success rate
-
-'''
 
 
 
