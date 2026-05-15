@@ -26,42 +26,6 @@ Traditional video compliance review is manual, time-consuming, and error-prone. 
 
 ---
 
-## 📁 Project Structure
-
-```
-backend/
-├── data/                             # Compliance rule documents (PDFs)
-│   ├── 1001a-influencer-guide.pdf    # FTC influencer compliance guide
-│   └── youtube-ad-specs.pdf          # YouTube advertising specifications
-│
-├── scripts/
-│   └── index_documents.py            # Indexes compliance PDFs into Azure AI Search
-│
-├── src/
-│   ├── api/
-│   │   ├── server.py                 # FastAPI server & REST endpoints
-│   │   └── telemetry.py              # Azure Application Insights configuration
-│   │
-│   ├── graph/
-│   │   ├── __init__.py
-│   │   ├── nodes.py                  # Individual LangGraph node definitions
-│   │   ├── state.py                  # Graph state schema & type definitions
-│   │   └── workflow.py               # LangGraph pipeline orchestration
-│   │
-│   └── services/
-│       ├── __init__.py
-│       └── video_indexer.py          # Azure Video Indexer integration
-│
-├── tests/                            # Unit & integration tests
-├── main.py                           # Application entry point
-├── Dockerfile                        # Container build instructions
-├── pyproject.toml                    # Project metadata & dependencies
-├── uv.lock                           # Dependency lock file
-└── README.md
-```
-
----
-
 ## ⚙️ How It Works
 
 **Step 1 — Video Ingestion**
